@@ -7,18 +7,23 @@ import { Poison } from "../component/Poison.js";
 import { Zodiac } from "../component/Zodiac.js";
 
 export const BuildList = () => {
+
+  let html = '';
+
   const el = document.querySelector('.content');
 
   const poisons = poisonData();
   const zodiacSigns = zodiacData();
 
-  el.innerHTML += "<div class='poisons'>";
-  el.innerHTML += "<h1>Poisons</h1>";
-  poisons.forEach( poison => el.innerHTML += Poison(poison));
-  el.innerHTML += "</div>";
+  html += "<h1>Poisons</h1>";
+  html += "<div class='poisons'>";
+  poisons.forEach( poison => html += `${Poison(poison)}`);
+  html += "</div>";
 
-  el.innerHTML += "<div class='zodiacs'>";
-  el.innerHTML += "<h1>Zodiac Signs</h1>";
-  zodiacSigns.forEach( zodiac => el.innerHTML += Zodiac(zodiac));
-  el.innerHTML += "</div>";
+  html += "<h1>Zodiac Signs</h1>";
+  html += "<div class='zodiacs'>";
+  zodiacSigns.forEach( zodiac => html += Zodiac(zodiac));
+  html += "</div>";
+
+  el.innerHTML = html;
 }

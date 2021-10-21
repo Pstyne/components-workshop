@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Roboto:wght@300&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Noto Sans Mono';
+  text-align: center;
+}
+
+h1 {
+  margin: 2em 0;
+}
+
+p {
+  font-family: 'Roboto';
+}
+
+/* Poisons/Zodiacs */
+
+.poisons, .zodiacs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.poison, .zodiac {
+  flex-basis: 300px;
+  background-color:lightgreen;
+  color: #3f3f3f;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+
